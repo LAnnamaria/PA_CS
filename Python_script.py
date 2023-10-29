@@ -36,7 +36,7 @@ class TotalNetWR:
 
     def po_exist(self):
         
-        # checking whether the PO has already existed on the date we are reqesting the total_netwr for
+        # checking whether the PO has already existed on the date we are requesting the total_netwr for
         
         self.ekko_df.AEDAT = pd.to_datetime(self.ekko_df.AEDAT).dt.normalize()
         checking_date = self.ekko_df[(self.ekko_df.EBELN == self.ebeln) & (self.ekko_df.MANDT == self.mandt)]['AEDAT'].values
@@ -115,7 +115,7 @@ class TotalNetWR:
         In that case we would only have the PO items in the sum that are mentioned in the CDPOS.
         '''
         prices = []
-        print(self.ekpo_df.EBELP.unique())
+        #print(self.ekpo_df.EBELP.unique())
         for x in self.ekpo_df.EBELP.unique():
             
             # in case the item is not in CDPOS
