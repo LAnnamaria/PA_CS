@@ -110,7 +110,7 @@ class TotalNetWR:
         '''
         first I thought we need to multiply the value with the requested 
         amount but my assumption after looking into the data is that the value takes the amount into consideration already
-        sometimes there are items in EKPO with no mention of them in the CDPOS. As I am not 100% aware of what that means, all items that were not in CDPOS,
+        sometimes there are items in EKPO with no mention of them in the CDPOS. As I am not 100% sure of what that means, all items that were not in CDPOS,
         I am taking the price mentioned in EKPO. If that means that we should exclude them of the sum, we can change the ekpo_df and price_on_df merge from left to inner.
         In that case we would only have the PO items in the sum that are mentioned in the CDPOS.
         '''
